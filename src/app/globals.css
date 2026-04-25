@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #001240;
+  --color-foreground: #ffffff;
+  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --navy-950: #001240;
+  --navy-900: #061a54;
+  --navy-800: #08246d;
+  --navy-700: #123787;
+  --yellow-500: #f8b000;
+  --yellow-400: #ffc526;
+  --yellow-300: #ffd95f;
+  --soft-text: #c9d6f5;
+  --muted-text: #8fa4d4;
+  --success: #27c46b;
+  --danger: #ff4d4d;
+  --charcoal: #1d1d1d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--navy-950);
+}
+
+body {
+  margin: 0;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 74% 16%, rgba(18, 55, 135, 0.55), transparent 28rem),
+    linear-gradient(150deg, #001240 0%, #061a54 45%, #001240 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.safe-bottom {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+.safe-top {
+  padding-top: max(1rem, env(safe-area-inset-top));
+}
+
+.glass {
+  border: 1px solid rgba(201, 214, 245, 0.18);
+  background: linear-gradient(145deg, rgba(8, 36, 109, 0.72), rgba(0, 18, 64, 0.76));
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.road-grid {
+  background-image:
+    linear-gradient(rgba(255, 197, 38, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 197, 38, 0.05) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.city-shadow::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 38%;
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.35), transparent),
+    linear-gradient(90deg, transparent 0 6%, rgba(0, 0, 0, 0.18) 6% 10%, transparent 10% 18%, rgba(0, 0, 0, 0.2) 18% 23%, transparent 23% 32%, rgba(0, 0, 0, 0.2) 32% 40%, transparent 40%);
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .floaty {
+    animation: floaty 5s ease-in-out infinite;
+  }
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
