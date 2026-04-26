@@ -124,7 +124,7 @@ export function AdminAuthCard({ mode = "login" }: { mode?: "login" | "register" 
 
 export function RoleSelectionCard() {
   return (
-    <div className="mx-auto grid w-full max-w-2xl gap-4 md:grid-cols-2">
+    <div className="mx-auto grid w-full max-w-2xl gap-4 sm:grid-cols-2">
       <ButtonLink href="/customer/login" className="min-h-28 flex-col text-lg">
         <Phone className="h-7 w-7" /> Customer Login
       </ButtonLink>

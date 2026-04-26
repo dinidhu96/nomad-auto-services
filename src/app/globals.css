@@ -33,6 +33,7 @@ html {
 body {
   margin: 0;
   color: #ffffff;
+  overflow-x: hidden;
   background:
     linear-gradient(rgba(255, 197, 38, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 197, 38, 0.05) 1px, transparent 1px),
@@ -51,6 +52,16 @@ input,
 select,
 textarea {
   font: inherit;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 .safe-bottom {

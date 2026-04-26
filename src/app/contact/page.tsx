@@ -8,17 +8,17 @@ export const metadata = pageMetadata("Contact", "Contact Nomad Auto Services by 
 
 export default function ContactPage() {
   return (
-    <PublicPage>
-      <main className="mx-auto flex min-h-screen max-w-7xl flex-col gap-8 px-4 py-10 pb-28 md:px-6">
-        <section className="glass overflow-hidden rounded-2xl">
-          <div className="border-b border-white/10 p-5 md:p-6">
-            <p className="text-sm font-black uppercase tracking-[.16em] text-[#FFC526]">Where Nomad is based</p>
-            <h1 className="mt-2 text-3xl font-black md:text-5xl">Perth, Western Australia</h1>
-            <p className="mt-3 max-w-3xl text-sm leading-7 text-[#C9D6F5]">
-              Start here to see the service area first. Replace this placeholder pin with the exact street address when you want the map to point at a real base of operations.
-            </p>
-          </div>
-          <div className="relative h-[360px] overflow-hidden md:h-[460px]">
+      <PublicPage>
+        <main className="mx-auto flex min-h-screen max-w-7xl flex-col gap-8 px-4 py-10 pb-28 md:px-6">
+          <section className="glass overflow-hidden rounded-2xl">
+            <div className="border-b border-white/10 p-5 md:p-6">
+              <p className="text-sm font-black uppercase tracking-[.16em] text-[#FFC526]">Where Nomad is based</p>
+              <h1 className="mt-2 text-2xl font-black leading-tight sm:text-3xl md:text-5xl">Perth, Western Australia</h1>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-[#C9D6F5]">
+                Start here to see the service area first. Replace this placeholder pin with the exact street address when you want the map to point at a real base of operations.
+              </p>
+            </div>
+          <div className="relative h-[300px] overflow-hidden sm:h-[360px] md:h-[460px]">
             <iframe
               title="Nomad Auto Services map"
               src="https://www.google.com/maps?q=Perth%2C%20Western%20Australia%2C%20Australia&output=embed"
@@ -27,7 +27,7 @@ export default function ContactPage() {
               referrerPolicy="no-referrer-when-downgrade"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-[#001240] via-transparent to-transparent" />
-            <div className="absolute left-4 top-4 max-w-xs rounded-2xl border border-white/10 bg-[#001240]/80 p-4 backdrop-blur-md">
+            <div className="absolute left-3 top-3 max-w-[calc(100%-1.5rem)] rounded-2xl border border-white/10 bg-[#001240]/80 p-4 backdrop-blur-md sm:left-4 sm:top-4 sm:max-w-xs">
               <p className="text-xs font-black uppercase tracking-[.16em] text-[#FFC526]">Service area</p>
               <p className="mt-1 text-lg font-black">Perth Metro</p>
               <p className="mt-2 text-sm leading-6 text-[#C9D6F5]">Mobile roadside assistance, workshop-style servicing, and dispatch support across the Perth area.</p>

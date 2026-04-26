@@ -22,19 +22,19 @@ export default function HomePage() {
       <PublicHeader />
       <MobileAppHeader />
       <main className="road-grid overflow-hidden pb-28 lg:pb-0">
-        <section className="city-shadow relative mx-auto grid min-h-[720px] max-w-7xl grid-cols-[1.05fr_.95fr] items-center gap-4 px-4 py-8 md:px-6 lg:grid-cols-[1fr_.9fr_.78fr] lg:gap-8 lg:py-12">
-          <div className="relative z-10 pt-4 lg:pt-0">
-            <h1 className="max-w-2xl text-4xl font-black leading-[.96] tracking-normal sm:text-5xl md:text-6xl lg:text-7xl">
+        <section className="city-shadow relative mx-auto grid max-w-7xl grid-cols-1 items-start gap-8 px-4 py-8 md:px-6 lg:min-h-[720px] lg:grid-cols-[1fr_.95fr_.78fr] lg:items-center lg:gap-8 lg:py-12">
+          <div className="relative z-10 pt-4 text-center lg:pt-0 lg:text-left">
+            <h1 className="mx-auto max-w-2xl text-4xl font-black leading-[.96] tracking-normal sm:text-5xl md:text-6xl lg:mx-0 lg:text-7xl">
               No roadside?
               <br />
               No problem.
               <br />
               <span className="text-[#F8B000]">Nomad</span> is on the way.
             </h1>
-            <p className="mt-5 max-w-xl text-sm font-medium leading-7 text-[#C9D6F5] md:text-lg md:leading-8">
+            <p className="mx-auto mt-5 max-w-xl text-sm font-medium leading-7 text-[#C9D6F5] md:text-lg md:leading-8 lg:mx-0">
               Fast, friendly, and professional mobile auto services delivered to you. From log book servicing and batteries to brakes, cooling systems, and fleet support, we keep drivers moving.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3 md:gap-4">
+            <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row md:gap-4 lg:justify-start">
               <ButtonLink href={business.phoneLink} className="text-base">
                 <Phone className="h-5 w-5" /> Call {business.phone}
               </ButtonLink>
@@ -42,18 +42,18 @@ export default function HomePage() {
                 <CalendarCheck className="h-5 w-5" /> Book Service
               </ButtonLink>
             </div>
-            <div className="mt-6 flex items-center gap-4">
+            <div className="mt-6 flex items-center justify-center gap-4 lg:justify-start">
               <span className="grid h-12 w-12 place-items-center rounded-full bg-[#F8B000] text-[#001240]">
                 <Star className="h-7 w-7 fill-current" />
               </span>
-              <div>
+              <div className="text-left">
                 <p className="font-black">4.9/5 Star Rated</p>
                 <p className="text-sm text-[#C9D6F5]">Trusted by 1,000+ drivers</p>
               </div>
             </div>
           </div>
-          <MascotHero className="-mb-10 max-h-[390px] overflow-hidden md:max-h-none lg:-mb-24" mobile />
-          <div className="relative z-10 hidden lg:block">
+          <MascotHero className="order-2 -mb-4 overflow-hidden lg:order-none lg:-mb-24" mobile />
+          <div className="relative z-10 order-3 hidden lg:block">
             <Suspense fallback={null}>
               <BookingWidget compact />
             </Suspense>
@@ -61,7 +61,7 @@ export default function HomePage() {
         </section>
 
         <section className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
             {serviceContent.slice(0, 5).map((service) => (
               <ServiceCard key={service.slug} service={{ id: service.slug, name: service.title, slug: service.slug, description: service.summary, base_price: 99, icon: service.icon, is_active: true }} />
             ))}

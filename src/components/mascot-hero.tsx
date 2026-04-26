@@ -11,7 +11,10 @@ export function MascotHero({ className, mobile = false }: { className?: string; 
         width={760}
         height={1040}
         priority
-        className="floaty relative mx-auto h-auto max-h-[560px] w-full max-w-[430px] object-contain mix-blend-screen drop-shadow-[0_30px_50px_rgba(0,0,0,.45)]"
+        className={cn(
+          "floaty relative mx-auto h-auto w-full object-contain mix-blend-screen drop-shadow-[0_30px_50px_rgba(0,0,0,.45)]",
+          mobile ? "max-h-[320px] max-w-[320px] md:max-h-[460px] md:max-w-[420px]" : "max-h-[320px] max-w-[320px] md:max-h-[560px] md:max-w-[430px]"
+        )}
       />
     </div>
   );

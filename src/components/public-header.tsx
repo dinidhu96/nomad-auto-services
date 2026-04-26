@@ -31,24 +31,24 @@ export function PublicHeader() {
 
 export function MobileAppHeader() {
   return (
-    <header className="safe-top sticky top-0 z-50 border-b border-white/10 bg-[#001240]/88 px-4 pb-3 backdrop-blur-xl lg:hidden">
+    <header className="safe-top sticky top-0 z-50 border-b border-white/10 bg-[#001240]/88 px-3 pb-2 backdrop-blur-xl lg:hidden">
       <div className="flex items-center justify-between">
-        <button aria-label="Open menu" className="grid h-11 w-11 place-items-center rounded-xl text-white">
-          <Menu className="h-7 w-7" />
+        <button aria-label="Open menu" className="grid h-10 w-10 place-items-center rounded-xl text-white">
+          <Menu className="h-6 w-6" />
         </button>
-        <BrandLogo className="scale-90" />
-        <a aria-label={`Call ${business.name} ${business.phone}`} href={business.phoneLink} className="grid h-11 w-11 place-items-center rounded-xl bg-[#F8B000] text-[#1D1D1D]">
-          <Phone className="h-5 w-5" />
+        <BrandLogo className="scale-[.82]" />
+        <a aria-label={`Call ${business.name} ${business.phone}`} href={business.phoneLink} className="grid h-10 w-10 place-items-center rounded-xl bg-[#F8B000] text-[#1D1D1D]">
+          <Phone className="h-4 w-4" />
         </a>
       </div>
-      <div className="mt-3 flex gap-2 overflow-x-auto pb-1 text-xs font-bold text-[#C9D6F5]">
-        <Link className="rounded-full bg-white/10 px-3 py-2" href="/book">Book Now</Link>
-        <a className="rounded-full bg-[#27C46B]/20 px-3 py-2 text-[#8EF3B8]" href={business.whatsapp}>
+      <div className="mt-3 grid grid-cols-2 gap-2 text-[11px] font-bold text-[#C9D6F5] sm:flex sm:flex-wrap">
+        <Link className="rounded-full bg-white/10 px-3 py-2 text-center" href="/book">Book Now</Link>
+        <a className="rounded-full bg-[#27C46B]/20 px-3 py-2 text-center text-[#8EF3B8]" href={business.whatsapp}>
           <MessageCircle className="mr-1 inline h-3 w-3" /> WhatsApp
         </a>
-        <details className="relative rounded-full bg-white/10 px-3 py-2">
+        <details className="relative col-span-2 rounded-full bg-white/10 px-3 py-2 sm:col-span-1">
           <summary className="cursor-pointer list-none">Services</summary>
-          <div className="absolute left-0 top-9 z-50 grid w-64 gap-1 rounded-xl border border-white/10 bg-[#001240] p-2 shadow-xl">
+          <div className="absolute left-0 top-9 z-50 grid w-[calc(100vw-1.5rem)] max-w-64 gap-1 rounded-xl border border-white/10 bg-[#001240] p-2 shadow-xl">
             {serviceContent.slice(0, 5).map((service) => (
               <Link key={service.slug} href={`/services/${service.slug}`} className="rounded-lg px-3 py-2 hover:bg-white/10">
                 {service.title}
@@ -56,7 +56,7 @@ export function MobileAppHeader() {
             ))}
           </div>
         </details>
-        <Link className="rounded-full bg-white/10 px-3 py-2" href="/customer/profile">Profile</Link>
+        <Link className="rounded-full bg-white/10 px-3 py-2 text-center" href="/customer/profile">Profile</Link>
       </div>
     </header>
   );

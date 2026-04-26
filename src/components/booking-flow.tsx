@@ -56,19 +56,22 @@ export function BookingFlow() {
   }
 
   return (
-    <div className="glass mx-auto max-w-3xl rounded-2xl p-5 md:p-7">
-      <div className="flex flex-wrap gap-2">
+    <div className="glass mx-auto max-w-3xl rounded-2xl p-4 sm:p-5 md:p-7">
+      <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
         {steps.map((label, index) => (
-          <span key={label} className={`rounded-full px-3 py-1 text-xs font-bold ${index === step ? "bg-[#F8B000] text-[#001240]" : "bg-white/10 text-[#C9D6F5]"}`}>
+          <span
+            key={label}
+            className={`rounded-full px-2 py-1 text-center text-[10px] font-bold sm:px-3 sm:text-xs ${index === step ? "bg-[#F8B000] text-[#001240]" : "bg-white/10 text-[#C9D6F5]"}`}
+          >
             {index + 1}. {label}
           </span>
         ))}
       </div>
 
-      <div className="mt-7">
+      <div className="mt-6 sm:mt-7">
         {step === 0 && (
           <section className="grid gap-4">
-            <h2 className="text-2xl font-black">Select service or issue</h2>
+            <h2 className="text-xl font-black sm:text-2xl">Select service or issue</h2>
             <Field label="Roadside issue" icon={<Wrench className="h-4 w-4 text-[#FFC526]" />}>
               <Select value={form.serviceId} onChange={(event) => setValue("serviceId", event.target.value)}>
                 {services.map((item) => (
@@ -86,7 +89,7 @@ export function BookingFlow() {
 
         {step === 1 && (
           <section className="grid gap-4">
-            <h2 className="text-2xl font-black">Vehicle details</h2>
+            <h2 className="text-xl font-black sm:text-2xl">Vehicle details</h2>
             <div className="grid gap-4 md:grid-cols-2">
               <Field label="Make" icon={<Car className="h-4 w-4 text-[#FFC526]" />}>
                 <Input value={form.vehicleMake} onChange={(event) => setValue("vehicleMake", event.target.value)} placeholder="Toyota" />
@@ -106,11 +109,11 @@ export function BookingFlow() {
 
         {step === 2 && (
           <section className="grid gap-4">
-            <h2 className="text-2xl font-black">Pickup location</h2>
+            <h2 className="text-xl font-black sm:text-2xl">Pickup location</h2>
             <Field label="Where should the technician meet you?" icon={<MapPin className="h-4 w-4 text-[#FFC526]" />}>
               <Input value={form.pickupLocation} onChange={(event) => setValue("pickupLocation", event.target.value)} placeholder="Street, landmark, or address" />
             </Field>
-            <div className="rounded-2xl border border-dashed border-[#FFC526]/40 bg-[#001240]/60 p-8 text-center text-[#C9D6F5]">
+            <div className="rounded-2xl border border-dashed border-[#FFC526]/40 bg-[#001240]/60 p-6 text-center text-sm text-[#C9D6F5] sm:p-8 sm:text-base">
               Mock map placeholder. Real map/geocoding can replace this block later.
             </div>
           </section>
@@ -118,7 +121,7 @@ export function BookingFlow() {
 
         {step === 3 && (
           <section className="grid gap-4">
-            <h2 className="text-2xl font-black">Schedule service</h2>
+            <h2 className="text-xl font-black sm:text-2xl">Schedule service</h2>
             <Field label="Timing" icon={<CalendarCheck className="h-4 w-4 text-[#FFC526]" />}>
               <Select value={form.scheduleMode} onChange={(event) => setValue("scheduleMode", event.target.value)}>
                 <option value="now">Send help now</option>
@@ -135,7 +138,7 @@ export function BookingFlow() {
 
         {step === 4 && (
           <section className="grid gap-4">
-            <h2 className="text-2xl font-black">Confirm request</h2>
+            <h2 className="text-xl font-black sm:text-2xl">Confirm request</h2>
             <div className="grid gap-3 rounded-2xl bg-white/8 p-5 text-sm text-[#C9D6F5]">
               <p><strong className="text-white">Service:</strong> {service.name}</p>
               <p><strong className="text-white">Vehicle:</strong> {form.vehicleYear} {form.vehicleMake} {form.vehicleModel} ({form.plateNumber})</p>
@@ -149,16 +152,16 @@ export function BookingFlow() {
 
       {message && <p className="mt-5 rounded-xl bg-[#FF4D4D]/15 p-3 text-sm font-bold text-[#FFB3B3]">{message}</p>}
 
-      <div className="mt-7 flex justify-between gap-3">
-        <Button variant="secondary" disabled={step === 0} onClick={() => setStep((current) => Math.max(0, current - 1))}>
+      <div className="mt-7 flex flex-col-reverse gap-3 sm:flex-row sm:justify-between">
+        <Button variant="secondary" className="w-full sm:w-auto" disabled={step === 0} onClick={() => setStep((current) => Math.max(0, current - 1))}>
           <ArrowLeft className="h-4 w-4" /> Back
         </Button>
         {step < steps.length - 1 ? (
-          <Button onClick={() => setStep((current) => Math.min(steps.length - 1, current + 1))}>
+          <Button className="w-full sm:w-auto" onClick={() => setStep((current) => Math.min(steps.length - 1, current + 1))}>
             Continue <ArrowRight className="h-4 w-4" />
           </Button>
         ) : (
-          <Button onClick={submit} disabled={busy}>
+          <Button className="w-full sm:w-auto" onClick={submit} disabled={busy}>
             {busy ? "Creating..." : "Confirm Request"}
           </Button>
         )}

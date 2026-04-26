@@ -13,10 +13,12 @@ export default function BookPage() {
       <MobileAppHeader />
       <main className="mx-auto min-h-screen max-w-7xl px-4 py-10 pb-28 md:px-6">
         <div className="mx-auto mb-8 max-w-3xl text-center">
-          <h1 className="text-4xl font-black md:text-6xl">Book roadside assistance.</h1>
-          <p className="mt-4 text-[#C9D6F5]">Five quick steps. A dispatcher can accept and assign a technician from the admin console.</p>
+          <h1 className="text-3xl font-black leading-tight sm:text-4xl md:text-6xl">Book roadside assistance.</h1>
+          <p className="mt-4 text-sm leading-7 text-[#C9D6F5] sm:text-base">
+            Five quick steps. A dispatcher can accept and assign a technician from the admin console.
+          </p>
         </div>
-        <section className="mx-auto mb-8 grid max-w-7xl gap-4 md:grid-cols-2 lg:grid-cols-5">
+        <section className="mx-auto mb-8 grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {serviceContent.filter((service) => service.primary).map((service) => (
             <ServiceCard
               key={service.slug}
