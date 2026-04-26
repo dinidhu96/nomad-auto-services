@@ -8,16 +8,16 @@ export const metadata = pageMetadata("Contact", "Contact Nomad Auto Services by 
 
 export default function ContactPage() {
   return (
-      <PublicPage>
-        <main className="mx-auto flex min-h-screen max-w-7xl flex-col gap-8 px-4 py-10 pb-28 md:px-6">
-          <section className="glass overflow-hidden rounded-2xl">
-            <div className="border-b border-white/10 p-5 md:p-6">
-              <p className="text-sm font-black uppercase tracking-[.16em] text-[#FFC526]">Where Nomad is based</p>
-              <h1 className="mt-2 text-2xl font-black leading-tight sm:text-3xl md:text-5xl">Perth, Western Australia</h1>
-              <p className="mt-3 max-w-3xl text-sm leading-7 text-[#C9D6F5]">
-                Start here to see the service area first. Replace this placeholder pin with the exact street address when you want the map to point at a real base of operations.
-              </p>
-            </div>
+    <PublicPage>
+      <main className="mx-auto flex min-h-screen max-w-7xl flex-col gap-8 px-4 py-10 pb-28 md:px-6">
+        <section className="glass overflow-hidden rounded-2xl">
+          <div className="border-b border-white/10 p-5 md:p-6">
+            <p className="text-sm font-black uppercase tracking-[.16em] text-[#FFC526]">Where Nomad is based</p>
+            <h1 className="mt-2 text-2xl font-black leading-tight sm:text-3xl md:text-5xl">Perth, Western Australia</h1>
+            <p className="mt-3 max-w-3xl text-sm leading-7 text-[#C9D6F5]">
+              Start here to see the service area first. Replace this placeholder pin with the exact street address when you want the map to point at a real base of operations.
+            </p>
+          </div>
           <div className="relative h-[300px] overflow-hidden sm:h-[360px] md:h-[460px]">
             <iframe
               title="Nomad Auto Services map"
@@ -54,7 +54,9 @@ export default function ContactPage() {
           <div className="glass rounded-2xl p-5">
             <Mail className="h-8 w-8 text-[#FFC526]" />
             <p className="mt-3 text-sm font-black uppercase tracking-[.14em] text-[#FFC526]">Email</p>
-            <a href={business.emailLink} className="mt-2 block break-all text-lg font-black hover:text-[#FFC526]">{business.email}</a>
+            <a href={business.emailLink} className="mt-2 block text-base font-black leading-6 break-words hover:text-[#FFC526] sm:text-lg">
+              {business.email}
+            </a>
             <p className="mt-2 text-sm leading-6 text-[#C9D6F5]">Send booking notes or general enquiries by email.</p>
           </div>
           <div className="glass rounded-2xl p-5">
