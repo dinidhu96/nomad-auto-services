@@ -1,21 +1,16 @@
 import { Menu, Phone, User, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { BrandLogo } from "@/components/brand-logo";
+import { DesktopRouteTabs } from "@/components/desktop-route-tabs";
 import { ButtonLink } from "@/components/ui/button";
-import { business, serviceContent, siteContent } from "@/lib/site";
+import { business, serviceContent } from "@/lib/site";
 
 export function PublicHeader() {
   return (
     <header className="sticky top-0 z-50 hidden border-b border-white/10 bg-[#001240]/78 backdrop-blur-xl lg:block">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <BrandLogo />
-        <nav className="flex items-center gap-8 text-sm font-semibold text-[#C9D6F5]">
-          {siteContent.navigation.map(({ label, href }) => (
-            <Link key={href} href={href} className="hover:text-[#FFC526]">
-              {label}
-            </Link>
-          ))}
-        </nav>
+        <DesktopRouteTabs />
         <div className="flex items-center gap-3">
           <ButtonLink href="/customer/profile" variant="secondary" className="px-4">
             <User className="h-4 w-4" /> Profile
