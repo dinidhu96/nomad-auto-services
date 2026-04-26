@@ -1,5 +1,6 @@
 import { MobileBottomNav } from "@/components/mobile-bottom-nav";
 import { MobileAppHeader, PublicHeader } from "@/components/public-header";
+import { PageTransition } from "@/components/page-transition";
 import { SiteFooter } from "@/components/site-footer";
 import { business } from "@/lib/site";
 import { ButtonLink } from "@/components/ui/button";
@@ -10,7 +11,7 @@ export function PublicPage({ children }: { children: React.ReactNode }) {
     <>
       <PublicHeader />
       <MobileAppHeader />
-      <div className="page-enter">{children}</div>
+      <PageTransition>{children}</PageTransition>
       <SiteFooter />
       <MobileBottomNav />
     </>

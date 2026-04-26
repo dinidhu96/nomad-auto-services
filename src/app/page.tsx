@@ -5,6 +5,7 @@ import { ServiceCard, StatCard, TestimonialCard } from "@/components/cards";
 import { MascotHero } from "@/components/mascot-hero";
 import { MobileBottomNav } from "@/components/mobile-bottom-nav";
 import { MobileAppHeader, PublicHeader } from "@/components/public-header";
+import { PageTransition } from "@/components/page-transition";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/ui/button";
 import { business, serviceContent } from "@/lib/site";
@@ -21,7 +22,8 @@ export default function HomePage() {
     <>
       <PublicHeader />
       <MobileAppHeader />
-      <main className="road-grid overflow-hidden pb-28 lg:pb-0">
+      <PageTransition>
+        <main className="road-grid overflow-hidden pb-28 lg:pb-0">
         <section className="city-shadow relative mx-auto grid max-w-7xl grid-cols-1 items-start gap-8 px-4 py-8 md:px-6 lg:min-h-[720px] lg:grid-cols-[1fr_.95fr_.78fr] lg:items-center lg:gap-8 lg:py-12">
           <div className="relative z-10 pt-4 text-center lg:pt-0 lg:text-left">
             <h1 className="mx-auto max-w-2xl text-4xl font-black leading-[.96] tracking-normal sm:text-5xl md:text-6xl lg:mx-0 lg:text-7xl">
@@ -83,7 +85,8 @@ export default function HomePage() {
             <TestimonialCard name="Kevin R." quote="The mechanic knew the issue and fixed my car right on the spot." />
           </div>
         </section>
-      </main>
+        </main>
+      </PageTransition>
       <SiteFooter />
       <MobileBottomNav />
     </>
