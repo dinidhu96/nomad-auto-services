@@ -5,7 +5,8 @@ export const phoneSchema = z.object({
 });
 
 export const otpSchema = phoneSchema.extend({
-  otp: z.string().length(6, "Enter the 6-digit OTP")
+  otp: z.string().length(6, "Enter the 6-digit OTP"),
+  fullName: z.string().min(2).optional().default("")
 });
 
 export const adminAuthSchema = z.object({
@@ -27,8 +28,24 @@ export const bookingSchema = z.object({
 });
 
 export const contactSchema = z.object({
-  name: z.string().min(2),
-  email: z.string().email(),
-  phone: z.string().min(7),
+  name: z.string().min(1, "Name is required"),
+  email: z.string().min(1, "Email is required").email("Enter a valid email"),
+  mobile: z.string().min(1, "Mobile is required"),
   message: z.string().min(10)
+});
+
+export const checkoutSchema = z.object({
+  product_id: z.string().min(1),
+  quantity: z.coerce.number().int().min(1).max(5),
+  customer_name: z.string().optional().default(""),
+  customer_email: z.string().email().optional().or(z.literal("")).default(""),
+  customer_mobile: z.string().optional().default("")
+});
+
+export const plateSchema = z.object({
+  plate: z
+    .string()
+    .transform((value) => value.trim().toUpperCase().replace(/[\s-]/g, ""))
+    .pipe(z.string().min(1).max(10).regex(/^[A-Z0-9]+$/, "Plate must contain letters and numbers only")),
+  state: z.enum(["ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"]).default("WA")
 });

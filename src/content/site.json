@@ -1,0 +1,34 @@
+{
+  "business": {
+    "name": "Nomad Auto Services",
+    "shortName": "Nomad",
+    "website": "https://nomadautoservices.com.au",
+    "phone": "0456 616 256",
+    "phoneLink": "tel:0456616256",
+    "email": "hello@nomadautoservices.com.au",
+    "emailLink": "mailto:hello@nomadautoservices.com.au",
+    "mrb": "12902",
+    "slogan": "No roadside? No Problem. Nomad is on the way.",
+    "partnerLabel": "Official Lubricant Partner",
+    "partnerName": "SPRINT LUBRICANTS",
+    "facebook": "https://www.facebook.com/share/18VmK6Rdyu/?mibextid=wwXIfr",
+    "whatsapp": "https://wa.me/message/V2JRYD63YGGSF1",
+    "ogImage": "/assets/nomad/banners/nomad-roadside-banner.png"
+  },
+  "navigation": [
+    { "label": "Home", "href": "/" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Book Now", "href": "/book" },
+    { "label": "Pricing", "href": "/pricing" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "mobileNavigation": [
+    { "label": "Home", "href": "/" },
+    { "label": "Book Now", "href": "/book" },
+    { "label": "Pricing", "href": "/pricing" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "paymentMethods": ["Visa", "Mastercard", "American Express", "Cash", "EFTPOS"]
+}

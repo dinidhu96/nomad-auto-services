@@ -1,0 +1,233 @@
+[
+  {
+    "slug": "log-book-service",
+    "title": "Log Book Service",
+    "summary": "Manufacturer-friendly scheduled servicing completed by mobile mechanics who keep your warranty needs in mind.",
+    "description": "Nomad Auto Services performs log book servicing for everyday drivers, tradies, and fleet vehicles across Perth. We inspect key safety items, replace service parts as required, and provide clear service notes.",
+    "icon": "CalendarCheck",
+    "primary": true,
+    "ideal_for": "Drivers who want scheduled maintenance with mobile convenience and clear service notes.",
+    "what_you_get": [
+      "Log book checks aligned to the vehicle schedule",
+      "Oil and filter service where required",
+      "Brake, steering, battery, and fluid inspection",
+      "Road test and service summary"
+    ],
+    "sample_jobs": [
+      "60,000 km log book service for a family SUV",
+      "Pre-worksite log book service for a fleet ute",
+      "Routine service with fluid top-ups and report notes"
+    ],
+    "common_signs": [
+      "Service light is due",
+      "Fuel economy has dropped",
+      "The car feels rough at idle",
+      "You need a stamped service record"
+    ]
+  },
+  {
+    "slug": "car-battery-replacements-perth",
+    "title": "Battery Replacements",
+    "summary": "Fast battery testing, replacement, and roadside support when your car will not start.",
+    "description": "We test your battery and charging system, recommend the right replacement, and get you moving without towing where possible.",
+    "icon": "BatteryCharging",
+    "primary": true,
+    "ideal_for": "Drivers stuck with slow cranking, flat batteries, or warning lights on the dash.",
+    "what_you_get": [
+      "Battery and charging system testing",
+      "Replacement battery recommendation and fitment",
+      "Terminal and cable inspection",
+      "Jump start support where possible"
+    ],
+    "sample_jobs": [
+      "Overnight flat battery at home",
+      "Battery replacement in a car park before work",
+      "Testing alternator charge before fitting a new battery"
+    ],
+    "common_signs": [
+      "Slow engine crank",
+      "Clicking when starting",
+      "Dim interior or dash lights",
+      "Battery warning on the cluster"
+    ]
+  },
+  {
+    "slug": "brake-repairs",
+    "title": "Brake Repairs",
+    "summary": "Brake pad replacement, inspection, diagnosis, and practical repair advice.",
+    "description": "From noisy brakes to worn pads, Nomad inspects the braking system and explains what is urgent, what can wait, and what the repair includes.",
+    "icon": "ShieldCheck",
+    "primary": true,
+    "ideal_for": "Drivers hearing squeals, grinding, or vibration when braking.",
+    "what_you_get": [
+      "Pad, disc, caliper, and fluid inspection",
+      "Brake service and replacement guidance",
+      "Noise and vibration diagnosis",
+      "Clear repair priorities"
+    ],
+    "sample_jobs": [
+      "Front brake pad replacement on a commuter hatchback",
+      "Brake inspection before a long trip",
+      "Vibration diagnosis after a steering wheel shake"
+    ],
+    "common_signs": [
+      "Squealing or grinding noise",
+      "Soft brake pedal",
+      "Vehicle pulls left or right under braking",
+      "Brake warning light"
+    ]
+  },
+  {
+    "slug": "cooling-system-repair",
+    "title": "Cooling System Repairs",
+    "summary": "Cooling system checks, leak diagnosis, coolant support, and overheating help.",
+    "description": "We help diagnose overheating, coolant loss, radiator issues, hose failures, and related cooling system faults.",
+    "icon": "Gauge",
+    "primary": true,
+    "ideal_for": "Drivers dealing with overheating, coolant smells, or a rising temperature gauge.",
+    "what_you_get": [
+      "Cooling system pressure checks",
+      "Leak inspection around hoses, radiator, and thermostat",
+      "Coolant top-up or replacement guidance",
+      "Overheating fault diagnosis"
+    ],
+    "sample_jobs": [
+      "Intermittent overheating on the way to work",
+      "Coolant leak from a split hose",
+      "Radiator inspection after temperature spikes"
+    ],
+    "common_signs": [
+      "Temperature gauge climbing",
+      "Sweet coolant smell",
+      "Coolant puddle under the vehicle",
+      "Heater not warming properly"
+    ]
+  },
+  {
+    "slug": "tradies-fleet",
+    "title": "Tradies & Fleet",
+    "summary": "Mobile service support for utes, vans, tradie vehicles, and small fleets.",
+    "description": "Keep vehicles on the road with scheduled servicing, brake support, oil changes, and fleet-friendly reporting.",
+    "icon": "Truck",
+    "primary": true,
+    "ideal_for": "Trades, service companies, and fleets that need repeat maintenance and less downtime.",
+    "what_you_get": [
+      "Scheduled mobile servicing at your site",
+      "Fleet-ready maintenance notes",
+      "Brake, battery, and fluid checks",
+      "Priority support for active vehicles"
+    ],
+    "sample_jobs": [
+      "Morning service for three work utes",
+      "Brake check before a job week begins",
+      "Oil and filter change between site runs"
+    ],
+    "common_signs": [
+      "Vehicles are due for service",
+      "Unplanned downtime is increasing",
+      "Drivers are reporting wear issues",
+      "Fleet records need to stay current"
+    ]
+  },
+  {
+    "slug": "car-service",
+    "title": "Car Service",
+    "summary": "Fixed-price service packages for common maintenance work.",
+    "description": "Choose from oil changes, basic service, full service, and brake service packages.",
+    "icon": "Wrench",
+    "primary": false,
+    "ideal_for": "Drivers who want straightforward fixed-price maintenance online.",
+    "what_you_get": [
+      "Fixed-price package selection",
+      "Quantity-based checkout",
+      "Mobile-friendly booking flow",
+      "No upfront payment in MVP mock mode"
+    ],
+    "sample_jobs": [
+      "Oil change for a daily commuter",
+      "Full service for a family vehicle",
+      "Brake service package for a pre-trip check"
+    ],
+    "common_signs": [
+      "Service is due soon",
+      "You want a clear package price",
+      "You need a simple online checkout"
+    ]
+  },
+  {
+    "slug": "car-repairs",
+    "title": "Car Repairs",
+    "summary": "Mobile mechanic repair support for common faults and warning signs.",
+    "description": "Nomad helps diagnose and repair practical vehicle issues with clear communication.",
+    "icon": "ToolCase",
+    "primary": false,
+    "ideal_for": "Drivers who need practical diagnosis before committing to a repair.",
+    "what_you_get": [
+      "On-site fault diagnosis",
+      "Repair options explained clearly",
+      "Parts and labour guidance",
+      "Support for warning lights and drivability issues"
+    ],
+    "sample_jobs": [
+      "Engine light diagnosis at home",
+      "Rough running inspection before parts are ordered",
+      "Starter, alternator, or sensor fault checks"
+    ],
+    "common_signs": [
+      "Warning lights on",
+      "Car won't start reliably",
+      "Loss of power",
+      "Unusual engine noise"
+    ]
+  },
+  {
+    "slug": "mobile-mechanic-car",
+    "title": "Mobile Mechanic Car",
+    "summary": "Mechanic support that comes to your home, worksite, or roadside location.",
+    "description": "Book convenient mobile mechanic support with visible call and WhatsApp options.",
+    "icon": "Car",
+    "primary": false,
+    "ideal_for": "Drivers who need a mechanic at home, at work, or roadside.",
+    "what_you_get": [
+      "Mobile mechanic call-out",
+      "Direct booking and support",
+      "Fast triage over phone or WhatsApp",
+      "Site-ready tools for common jobs"
+    ],
+    "sample_jobs": [
+      "Car park inspection before the school run",
+      "Driveway repair for a non-starting car",
+      "Worksite service call for a company car"
+    ],
+    "common_signs": [
+      "You need a mechanic to come to you",
+      "The vehicle cannot be driven safely",
+      "You want convenience over towing"
+    ]
+  },
+  {
+    "slug": "prepurchase-vehicle-inspections-perth",
+    "title": "Prepurchase Vehicle Inspections Perth",
+    "summary": "Practical inspection support before buying a used car.",
+    "description": "Get a mobile inspection perspective before you commit to a vehicle.",
+    "icon": "CheckCircle2",
+    "primary": false,
+    "ideal_for": "Buyers who want a practical pre-purchase view before paying for a used vehicle.",
+    "what_you_get": [
+      "Pre-purchase inspection checklist",
+      "Visible wear and service concerns",
+      "Practical report-style feedback",
+      "Mobile inspection on-site when possible"
+    ],
+    "sample_jobs": [
+      "Used hatchback inspection before deposit",
+      "4WD check before buying from a private seller",
+      "Fleet replacement review for a business vehicle"
+    ],
+    "common_signs": [
+      "You are not sure about the vehicle's condition",
+      "You want a second opinion before buying",
+      "The seller cannot provide clear service history"
+    ]
+  }
+]

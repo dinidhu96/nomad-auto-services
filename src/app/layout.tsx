@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
+import { business } from "@/lib/site";
 import "./globals.css";
 
 const geist = Geist({
@@ -8,16 +9,42 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(business.website),
   title: {
-    default: "Nomad Auto Services",
-    template: "%s | Nomad Auto Services"
+    default: business.name,
+    template: `%s | ${business.name}`
   },
-  description: "Fast, friendly mobile roadside assistance wherever drivers need help.",
-  applicationName: "Nomad Auto Services",
+  description: "Mobile mechanic, roadside assistance, log book service, batteries, brakes, cooling repairs, and fleet servicing across Perth.",
+  applicationName: business.name,
   manifest: "/manifest.json",
+  alternates: {
+    canonical: "/"
+  },
+  openGraph: {
+    type: "website",
+    siteName: business.name,
+    title: business.name,
+    description: business.slogan,
+    url: business.website,
+    images: [business.ogImage]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: business.name,
+    description: business.slogan,
+    images: [business.ogImage]
+  },
+  formatDetection: {
+    telephone: false
+  },
+  icons: {
+    icon: "/assets/logo-mark-crop.jpeg",
+    shortcut: "/assets/logo-mark-crop.jpeg",
+    apple: "/assets/logo-mark-crop.jpeg"
+  },
   appleWebApp: {
     capable: true,
-    title: "Nomad Auto",
+    title: business.shortName,
     statusBarStyle: "black-translucent"
   }
 };

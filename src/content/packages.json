@@ -1,0 +1,66 @@
+[
+  {
+    "id": "brake-service",
+    "category": "Car Service",
+    "name": "Brake Service",
+    "price": 150,
+    "currency": "AUD",
+    "description": "Replacement of all brake pads."
+  },
+  {
+    "id": "oil-change",
+    "category": "Car Service",
+    "name": "Oil Change",
+    "price": 99,
+    "currency": "AUD",
+    "description": "Replace old engine oil with fresh oil, inspect/replace oil filter if required."
+  },
+  {
+    "id": "basic-service",
+    "category": "Car Service",
+    "name": "Basic Service",
+    "price": 154,
+    "currency": "AUD",
+    "description": "Full safety inspection and report plus vehicle vacuum."
+  },
+  {
+    "id": "full-service",
+    "category": "Car Service",
+    "name": "Full Service",
+    "price": 179,
+    "currency": "AUD",
+    "description": "Comprehensive service package for regular maintenance."
+  },
+  {
+    "id": "fleet-brake-service",
+    "category": "Tradies & Fleet",
+    "name": "Fleet Brake Service",
+    "price": 150,
+    "currency": "AUD",
+    "description": "Brake service package for tradie and fleet vehicles."
+  },
+  {
+    "id": "fleet-oil-change",
+    "category": "Tradies & Fleet",
+    "name": "Fleet Oil Change",
+    "price": 99,
+    "currency": "AUD",
+    "description": "Oil change package for tradie and fleet vehicles."
+  },
+  {
+    "id": "fleet-basic-service",
+    "category": "Tradies & Fleet",
+    "name": "Fleet Basic Service",
+    "price": 154,
+    "currency": "AUD",
+    "description": "Basic service package for tradie and fleet vehicles."
+  },
+  {
+    "id": "fleet-full-service",
+    "category": "Tradies & Fleet",
+    "name": "Fleet Full Service",
+    "price": 179,
+    "currency": "AUD",
+    "description": "Full service package for tradie and fleet vehicles."
+  }
+]

@@ -25,7 +25,7 @@ export async function POST(request: Request) {
         email,
         phone: parsed.data.phone,
         role: "customer",
-        full_name: "Nomad Driver"
+        full_name: parsed.data.fullName || "Nomad Driver"
       });
     }
   }

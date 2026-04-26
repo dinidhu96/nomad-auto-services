@@ -1,10 +1,11 @@
+import { business } from "@/lib/site";
 import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Nomad Auto Services",
-    short_name: "Nomad Auto",
-    description: "Mobile roadside assistance booking app.",
+    name: business.name,
+    short_name: business.shortName,
+    description: business.slogan,
     start_url: "/",
     display: "standalone",
     background_color: "#001240",

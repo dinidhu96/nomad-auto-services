@@ -12,6 +12,7 @@ export function CustomerOtpCard({ mode = "login" }: { mode?: "login" | "register
   const searchParams = useSearchParams();
   const returnTo = searchParams.get("returnTo") || "/customer/dashboard";
   const [phone, setPhone] = useState("");
+  const [fullName, setFullName] = useState("");
   const [otp, setOtp] = useState("");
   const [sent, setSent] = useState(false);
   const [message, setMessage] = useState("");
@@ -20,7 +21,7 @@ export function CustomerOtpCard({ mode = "login" }: { mode?: "login" | "register
     const response = await fetch("/api/demo-otp/start", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ phone })
+      body: JSON.stringify({ phone, fullName })
     });
     setSent(response.ok);
     setMessage(response.ok ? "Demo OTP sent. Use 123456." : "Enter a valid phone number.");
@@ -30,7 +31,7 @@ export function CustomerOtpCard({ mode = "login" }: { mode?: "login" | "register
     const response = await fetch("/api/demo-otp/verify", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ phone, otp })
+      body: JSON.stringify({ phone, otp, fullName })
     });
     if (response.ok) router.push(returnTo);
     else setMessage("The demo OTP is 123456.");
@@ -41,8 +42,13 @@ export function CustomerOtpCard({ mode = "login" }: { mode?: "login" | "register
       <h1 className="text-3xl font-black">{mode === "register" ? "Create customer account" : "Customer login"}</h1>
       <p className="mt-2 text-sm leading-6 text-[#C9D6F5]">Enter your mobile number. The MVP uses simulated OTP for fast testing.</p>
       <div className="mt-6 grid gap-4">
+        {mode === "register" && (
+          <Field label="Full name">
+            <Input value={fullName} onChange={(event) => setFullName(event.target.value)} required placeholder="Customer name" />
+          </Field>
+        )}
         <Field label="Mobile number" icon={<Phone className="h-4 w-4 text-[#FFC526]" />}>
-          <Input value={phone} onChange={(event) => setPhone(event.target.value)} placeholder="+1 876 555 0101" />
+          <Input value={phone} onChange={(event) => setPhone(event.target.value)} required placeholder="+1 876 555 0101" />
         </Field>
         {sent && (
           <Field label="Demo OTP">

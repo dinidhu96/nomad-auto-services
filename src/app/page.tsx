@@ -1,19 +1,19 @@
 import { CalendarCheck, Phone, Star } from "lucide-react";
-import Image from "next/image";
 import { Suspense } from "react";
 import { BookingWidget } from "@/components/booking-widget";
 import { ServiceCard, StatCard, TestimonialCard } from "@/components/cards";
 import { MascotHero } from "@/components/mascot-hero";
 import { MobileBottomNav } from "@/components/mobile-bottom-nav";
 import { MobileAppHeader, PublicHeader } from "@/components/public-header";
+import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/ui/button";
-import { services } from "@/lib/constants";
+import { business, serviceContent } from "@/lib/site";
 
 const stats = [
   { icon: "Clock3", value: "24/7 Support", label: "We are here whenever you need us." },
   { icon: "Gauge", value: "15 Min Avg.", label: "Quick help right when you need it." },
   { icon: "ShieldCheck", value: "Certified Techs", label: "Skilled, licensed professionals." },
-  { icon: "MapPin", value: "Islandwide", label: "Coverage wherever drivers need help." }
+  { icon: "MapPin", value: "Perth & WA", label: "Mobile support where drivers need help." }
 ];
 
 export default function HomePage() {
@@ -32,11 +32,11 @@ export default function HomePage() {
               <span className="text-[#F8B000]">Nomad</span> is on the way.
             </h1>
             <p className="mt-5 max-w-xl text-sm font-medium leading-7 text-[#C9D6F5] md:text-lg md:leading-8">
-              Fast, friendly, and professional mobile auto services delivered to you. From jump starts and tire changes to emergency fuel and on-site repairs, we have you covered, anytime, anywhere.
+              Fast, friendly, and professional mobile auto services delivered to you. From log book servicing and batteries to brakes, cooling systems, and fleet support, we keep drivers moving.
             </p>
             <div className="mt-6 flex flex-wrap gap-3 md:gap-4">
-              <ButtonLink href="/book" className="text-base">
-                <Phone className="h-5 w-5" /> Get Help Now
+              <ButtonLink href={business.phoneLink} className="text-base">
+                <Phone className="h-5 w-5" /> Call {business.phone}
               </ButtonLink>
               <ButtonLink href="/book" variant="secondary" className="text-base">
                 <CalendarCheck className="h-5 w-5" /> Book Service
@@ -61,9 +61,9 @@ export default function HomePage() {
         </section>
 
         <section className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {services.slice(0, 4).map((service) => (
-              <ServiceCard key={service.id} service={service} />
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+            {serviceContent.slice(0, 5).map((service) => (
+              <ServiceCard key={service.slug} service={{ id: service.slug, name: service.title, slug: service.slug, description: service.summary, base_price: 99, icon: service.icon, is_active: true }} />
             ))}
           </div>
         </section>
@@ -87,35 +87,5 @@ export default function HomePage() {
       <SiteFooter />
       <MobileBottomNav />
     </>
-  );
-}
-
-function SiteFooter() {
-  return (
-    <footer className="hidden border-t border-white/10 bg-[#001240] lg:block">
-      <div className="mx-auto grid max-w-7xl gap-8 px-6 py-8 md:grid-cols-5">
-        <div className="md:col-span-2">
-          <Image src="/assets/logo-horizontal-crop.jpeg" alt="Nomad Auto Services" width={178} height={72} className="h-16 w-auto" />
-          <p className="mt-3 max-w-xs text-sm leading-6 text-[#C9D6F5]">No roadside? No problem. Nomad is on the way.</p>
-        </div>
-        <FooterList title="Services" items={["Battery Jump Start", "Tire Replacement", "Fuel Delivery", "On-site Mechanic"]} />
-        <FooterList title="Company" items={["About Us", "Our Process", "Pricing", "Careers"]} />
-        <FooterList title="Support" items={["FAQ", "Contact Us", "Terms of Service", "Privacy Policy"]} />
-      </div>
-      <p className="pb-5 text-center text-xs text-[#8FA4D4]">© 2026 Nomad Auto Services. All rights reserved.</p>
-    </footer>
-  );
-}
-
-function FooterList({ title, items }: { title: string; items: string[] }) {
-  return (
-    <div>
-      <h3 className="font-black">{title}</h3>
-      <ul className="mt-3 grid gap-2 text-sm text-[#C9D6F5]">
-        {items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-    </div>
   );
 }

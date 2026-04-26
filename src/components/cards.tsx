@@ -1,4 +1,4 @@
-import { ChevronRight, Star } from "lucide-react";
+import { ArrowUpRight, ChevronRight, Star } from "lucide-react";
 import { ServiceIcon } from "@/components/icons";
 import { ButtonLink } from "@/components/ui/button";
 import type { PricingPlan, Service } from "@/lib/types";
@@ -7,12 +7,17 @@ import { formatMoney } from "@/lib/utils";
 export function ServiceCard({ service }: { service: Service }) {
   return (
     <article className="glass rounded-2xl p-5 transition hover:-translate-y-1 hover:border-[#FFC526]/50">
-      <ServiceIcon name={service.icon} className="mb-4 h-12 w-12 text-[#F8B000]" />
-      <h3 className="text-xl font-black text-white">{service.name}</h3>
+      <div className="flex items-start justify-between gap-3">
+        <ServiceIcon name={service.icon} className="h-12 w-12 text-[#F8B000]" />
+        <ButtonLink href={`/services/${service.slug}`} variant="ghost" className="min-h-9 px-2 text-[#FFC526]">
+          Details <ArrowUpRight className="h-4 w-4" />
+        </ButtonLink>
+      </div>
+      <h3 className="mt-4 text-xl font-black text-white">{service.name}</h3>
       <p className="mt-2 min-h-12 text-sm leading-6 text-[#C9D6F5]">{service.description}</p>
-      <div className="mt-4 flex items-center justify-between">
+      <div className="mt-4 flex items-center justify-between gap-3">
         <span className="font-bold text-[#FFC526]">From {formatMoney(service.base_price)}</span>
-        <ButtonLink href={`/book?service=${service.slug}`} variant="ghost" className="min-h-9 px-2 text-[#FFC526]">
+        <ButtonLink href={`/book?service=${service.slug}`} className="min-h-9 px-3">
           Book <ChevronRight className="h-4 w-4" />
         </ButtonLink>
       </div>

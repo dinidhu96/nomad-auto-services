@@ -1,8 +1,8 @@
 import type { Booking, PricingPlan, Service, Vehicle } from "@/lib/types";
 
 export const brand = {
-  phone: process.env.NEXT_PUBLIC_BUSINESS_PHONE || "(876) 555-0123",
-  email: process.env.NEXT_PUBLIC_BUSINESS_EMAIL || "support@nomadautoservices.com",
+  phone: process.env.NEXT_PUBLIC_BUSINESS_PHONE || "0456 616 256",
+  email: process.env.NEXT_PUBLIC_BUSINESS_EMAIL || "hello@nomadautoservices.com.au",
   colors: {
     navy950: "#001240",
     navy900: "#061A54",

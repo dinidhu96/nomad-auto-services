@@ -1,0 +1,128 @@
+[
+  {
+    "slug": "log-book-service",
+    "intro": "A proper log book service keeps the vehicle on schedule without the hassle of a workshop visit. Nomad comes to you, follows the required maintenance steps, and gives you a clean summary of what was checked and replaced.",
+    "sections": [
+      {
+        "title": "Why this service matters",
+        "body": "Routine servicing keeps wear under control and helps you stay on top of the manufacturer's maintenance schedule. That matters for daily drivers, tradies, and fleets that need predictable running costs."
+      },
+      {
+        "title": "Good to know",
+        "body": "Bring up any warning lights, odd noises, or recent changes in fuel use so the service can be tailored to the vehicle's condition."
+      }
+    ]
+  },
+  {
+    "slug": "car-battery-replacements-perth",
+    "intro": "Battery failures usually show up at the worst time. Nomad tests the battery and charging system first, then fits the correct replacement if needed so you do not end up paying for the wrong fix.",
+    "sections": [
+      {
+        "title": "Why this service matters",
+        "body": "A weak battery can mimic other electrical problems. Testing first keeps the decision simple and avoids unnecessary parts replacement."
+      },
+      {
+        "title": "Good to know",
+        "body": "If the car has been sitting for a while or the alternator warning light is on, ask for a charging check at the same time."
+      }
+    ]
+  },
+  {
+    "slug": "brake-repairs",
+    "intro": "Brake issues need clear diagnosis, not guesswork. Nomad inspects the pads, discs, fluid, and calipers and explains what should be fixed now and what can wait.",
+    "sections": [
+      {
+        "title": "Why this service matters",
+        "body": "Noise, vibration, and pedal feel often tell you enough to catch the problem early. Addressing brake wear before it gets severe can reduce repair cost and improve safety."
+      },
+      {
+        "title": "Good to know",
+        "body": "If the vehicle pulls to one side or the steering wheel shakes under braking, make that clear when booking so the inspection can focus on the right area."
+      }
+    ]
+  },
+  {
+    "slug": "cooling-system-repair",
+    "intro": "Cooling problems can escalate quickly, especially in hotter conditions. Nomad checks hoses, radiator condition, coolant level, and pressure-related leaks to find the source of the issue.",
+    "sections": [
+      {
+        "title": "Why this service matters",
+        "body": "Overheating risks engine damage. A proper cooling inspection helps identify whether the fix is a simple hose replacement, coolant service, or a deeper fault."
+      },
+      {
+        "title": "Good to know",
+        "body": "If the temperature gauge is climbing, stop driving as soon as it is safe to do so and request support before the problem gets worse."
+      }
+    ]
+  },
+  {
+    "slug": "tradies-fleet",
+    "intro": "Fleet vehicles need fast turnaround and consistent maintenance. Nomad helps tradies and small businesses keep vehicles available with mobile servicing at the right time and place.",
+    "sections": [
+      {
+        "title": "Why this service matters",
+        "body": "Downtime costs money. Scheduled support for utes, vans, and work vehicles keeps the fleet moving and gives you better visibility over upcoming maintenance."
+      },
+      {
+        "title": "Good to know",
+        "body": "If you manage multiple vehicles, Nomad can prioritise grouped servicing so drivers spend less time waiting around."
+      }
+    ]
+  },
+  {
+    "slug": "car-service",
+    "intro": "Fixed-price car service packages are the fastest way to book standard maintenance online. Choose the package that suits the job and continue through checkout in a few taps.",
+    "sections": [
+      {
+        "title": "Why this service matters",
+        "body": "A clear package price makes it easier to book maintenance without calling around for quotes. It is ideal when the work is routine and the job scope is straightforward."
+      },
+      {
+        "title": "Good to know",
+        "body": "If you are unsure which package fits, start with the service that matches the mileage or ask Nomad to guide you through the options."
+      }
+    ]
+  },
+  {
+    "slug": "car-repairs",
+    "intro": "When something feels off, a mobile repair inspection is the sensible first step. Nomad can diagnose common faults and outline the repair path before you commit to major work.",
+    "sections": [
+      {
+        "title": "Why this service matters",
+        "body": "Diagnosis first keeps the repair decision grounded in symptoms instead of assumptions. That is useful for warning lights, rough running, loss of power, and starting issues."
+      },
+      {
+        "title": "Good to know",
+        "body": "Share every symptom you have noticed, even if it seems small. Small clues often save time during diagnosis."
+      }
+    ]
+  },
+  {
+    "slug": "mobile-mechanic-car",
+    "intro": "Mobile mechanic support is the most convenient option when the vehicle is hard to move or the customer simply needs service at home or work. Nomad brings the workshop mindset to the vehicle.",
+    "sections": [
+      {
+        "title": "Why this service matters",
+        "body": "A mobile call-out removes the towing step where possible and gives you a fast answer on whether the car can be repaired on site."
+      },
+      {
+        "title": "Good to know",
+        "body": "Let Nomad know if the vehicle is in a basement, car park, driveway, or roadside shoulder so access can be planned properly."
+      }
+    ]
+  },
+  {
+    "slug": "prepurchase-vehicle-inspections-perth",
+    "intro": "A pre-purchase inspection gives buyers a practical second set of eyes before money changes hands. Nomad checks the vehicle on site and reports on visible wear, service history concerns, and obvious issues.",
+    "sections": [
+      {
+        "title": "Why this service matters",
+        "body": "A used vehicle can look clean while still hiding maintenance problems. A mobile inspection helps reduce risk before you commit to the purchase."
+      },
+      {
+        "title": "Good to know",
+        "body": "It is best to book the inspection before a deposit is paid so you can make an informed decision."
+      }
+    ]
+  }
+]

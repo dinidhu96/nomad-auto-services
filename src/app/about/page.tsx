@@ -1,16 +1,15 @@
 import { CheckCircle2 } from "lucide-react";
 import { MascotHero } from "@/components/mascot-hero";
-import { MobileAppHeader, PublicHeader } from "@/components/public-header";
+import { PublicPage } from "@/components/public-page";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata = { title: "About" };
+export const metadata = pageMetadata("About", "Nomad Auto Services delivers fast, friendly mobile roadside assistance and automotive support for Australian drivers.", "/about");
 
-const points = ["Certified technicians", "Islandwide coverage", "No payment required upfront", "Friendly dispatch support"];
+const points = ["MRB registered", "Perth and WA mobile support", "No payment required upfront", "Friendly dispatch support"];
 
 export default function AboutPage() {
   return (
-    <>
-      <PublicHeader />
-      <MobileAppHeader />
+    <PublicPage>
       <main className="mx-auto grid min-h-screen max-w-7xl gap-8 px-4 py-10 pb-28 md:px-6 lg:grid-cols-[1fr_.8fr]">
         <section>
           <h1 className="text-4xl font-black md:text-6xl">Fast, friendly mobile roadside assistance.</h1>
@@ -18,7 +17,7 @@ export default function AboutPage() {
             Nomad Auto Services delivers fast, friendly mobile roadside assistance wherever drivers need help.
           </p>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
-            {["Our mission", "Why drivers trust us", "Certified technicians", "Islandwide coverage"].map((title) => (
+            {["Our mission", "Why drivers trust us", "Certified technicians", "Mobile coverage"].map((title) => (
               <article key={title} className="glass rounded-2xl p-5">
                 <h2 className="text-xl font-black">{title}</h2>
                 <p className="mt-2 text-sm leading-6 text-[#C9D6F5]">We combine clear communication, prepared technicians, and mobile-first booking so help gets moving quickly.</p>
@@ -35,6 +34,6 @@ export default function AboutPage() {
         </section>
         <MascotHero />
       </main>
-    </>
+    </PublicPage>
   );
 }

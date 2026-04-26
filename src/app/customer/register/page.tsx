@@ -1,16 +1,19 @@
 import { Suspense } from "react";
 import { CustomerOtpCard } from "@/components/auth-card";
 import { BrandLogo } from "@/components/brand-logo";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata = { title: "Customer Register" };
+export const metadata = pageMetadata("Customer Register", "Create a customer profile with mobile OTP for Nomad Auto Services.", "/customer/register");
 
 export default function CustomerRegisterPage() {
   return (
-    <main className="grid min-h-screen place-items-center px-4 py-10">
+    <main className="road-grid grid min-h-screen place-items-center px-4 py-10">
       <div className="w-full">
-        <BrandLogo className="mx-auto mb-8 justify-center" />
+        <BrandLogo compact className="mx-auto mb-8 justify-center" />
         <Suspense fallback={null}>
-          <CustomerOtpCard mode="register" />
+          <div className="page-enter">
+            <CustomerOtpCard mode="register" />
+          </div>
         </Suspense>
       </div>
     </main>

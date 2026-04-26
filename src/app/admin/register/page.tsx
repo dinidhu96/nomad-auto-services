@@ -1,14 +1,17 @@
 import { AdminAuthCard } from "@/components/auth-card";
 import { BrandLogo } from "@/components/brand-logo";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata = { title: "Admin Register" };
+export const metadata = pageMetadata("Admin Register", "Create a company account for Nomad Auto Services.", "/admin/register");
 
 export default function AdminRegisterPage() {
   return (
-    <main className="grid min-h-screen place-items-center px-4 py-10">
+    <main className="road-grid grid min-h-screen place-items-center px-4 py-10">
       <div className="w-full">
-        <BrandLogo className="mx-auto mb-8 justify-center" />
-        <AdminAuthCard mode="register" />
+        <BrandLogo compact className="mx-auto mb-8 justify-center" />
+        <div className="page-enter">
+          <AdminAuthCard mode="register" />
+        </div>
       </div>
     </main>
   );

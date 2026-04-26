@@ -1,16 +1,16 @@
 "use client";
 
-import { CalendarCheck, Home, ToolCase, User, Wrench } from "lucide-react";
+import { CalendarCheck, Home, Phone, Tags, Wrench } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 const items = [
-  { label: "Home", href: "/customer/dashboard", icon: Home },
-  { label: "Services", href: "/customer/services", icon: Wrench },
+  { label: "Home", href: "/", icon: Home },
+  { label: "Services", href: "/services", icon: Wrench },
   { label: "Book Now", href: "/book", icon: CalendarCheck, center: true },
-  { label: "Bookings", href: "/customer/bookings", icon: ToolCase },
-  { label: "Profile", href: "/customer/profile", icon: User }
+  { label: "Pricing", href: "/pricing", icon: Tags },
+  { label: "Contact", href: "/contact", icon: Phone }
 ];
 
 export function MobileBottomNav() {
